@@ -1,0 +1,10 @@
+Date: Fri, 13 Jul 2018 21:35:17 +0000
+From: WordPress <baz@example.com>
+Message-ID: <5d3ccf1d8de8623437c6165914c0bd31@example.org>
+X-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+To: foobar@example.com
+Subject: Subject
+
+Email with only the from email changed
