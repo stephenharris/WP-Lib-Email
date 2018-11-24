@@ -24,6 +24,7 @@ matrix:
 
 before_script:
 - export PATH="$HOME/.composer/vendor/bin:$PATH"
+- composer install
 - mysql --version
 - php --version
 - ./vendor/bin/phpunit --version
