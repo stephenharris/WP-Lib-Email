@@ -3,7 +3,7 @@
 define('WP_LIB_EMAIL_DIR', dirname(dirname(__DIR__)));
 define('WP_LIB_EMAIL_TEST_DIR', WP_LIB_EMAIL_DIR . '/tests/unit-tests');
 
-require_once( WP_LIB_EMAIL_DIR . '/autoloader.php');#
+require_once( WP_LIB_EMAIL_DIR . '/vendor/autoload.php');
 
 function esc_html($text) {
 	return $text;

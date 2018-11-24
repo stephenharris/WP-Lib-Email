@@ -35,6 +35,8 @@
         }
     ],
 		"autoload": {
-				"classmap": ["src/"]
+      "psr-4": {
+        "StephenHarris\\WPEmail\\": "src/"
+      }
 		}
 }

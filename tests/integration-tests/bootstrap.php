@@ -9,7 +9,7 @@ if ( !$_tests_dir ) $_tests_dir = '/tmp/wp-test-library/';
 require_once $_tests_dir . '/includes/functions.php';
 
 tests_add_filter( 'muplugins_loaded', function(){
-	require dirname( __FILE__ ) . '/../../autoloader.php';
+	require dirname( __FILE__ ) . '/../../vendor/autoload.php';
 });
 
 
