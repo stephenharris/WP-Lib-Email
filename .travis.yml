@@ -1,0 +1,34 @@
+language: php
+
+sudo: false
+
+dist: precise
+
+php:
+- 5.4
+- 5.5
+- 5.6
+- 7.0
+- 7.1
+
+env:
+- WP_VERSION=nightly
+- WP_VERSION=latest
+- WP_VERSION=4.9.8
+- WP_VERSION=4.8.7
+- WP_VERSION=4.7.11
+
+matrix:
+  allow_failures:
+    - env: WP_VERSION=nightly
+
+before_script:
+- export PATH="$HOME/.composer/vendor/bin:$PATH"
+- mysql --version
+- php --version
+- ./vendor/bin/phpunit --version
+- bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
+
+script:
+- composer run-script tests
+- composer run-script code-standards
