@@ -22,20 +22,16 @@ WP_CORE_DIR=/tmp/wordpress/
 # Download WordPress
 mkdir -p $WP_CORE_DIR;
 mkdir -p $WP_TESTS_DIR;
-cd $WP_CORE_DIR;
-wp core download --force --version=$WP_VERSION;
+
+vendor/bin/wp core download --force --version=$WP_VERSION --path=$WP_CORE_DIR;
 
 # Create WordPress config
-wp core config --dbname=$DB_NAME --dbuser=$DB_USER --dbpass=$DB_PASS
+vendor/bin/wp core config --dbname=$DB_NAME --dbuser=$DB_USER --dbpass=$DB_PASS --path=$WP_CORE_DIR
 
 # Install the database tables
-wp db create
-wp core install --url="wp.dev" --title="wp.dev" --admin_user="admin" --admin_password="password" --admin_email="admin@wp.dev" --skip-email
+vendor/bin/wp db create --path=$WP_CORE_DIR
+vendor/bin/wp core install --url="wp.dev" --title="wp.dev" --admin_user="admin" --admin_password="password" --admin_email="admin@wp.dev" --path=$WP_CORE_DIR --skip-email
 
 # Test library
-wp test-library download --library-path=/tmp/wp-test-library
-wp test-library config --dbname=$DB_NAME --dbuser=$DB_USER --dbpass=$DB_PASS --library-path=/tmp/wp-test-library
-
-# Copy in plugin
-rm -rf ${WP_CORE_DIR}wp-content/plugins/*
-ln -s $WORKSPACE/bookedup ${WP_CORE_DIR}/wp-content/plugins/bookedup
+vendor/bin/wp test-library download --library-path=/tmp/wp-test-library --path=$WP_CORE_DIR
+vendor/bin/wp test-library config --dbname=$DB_NAME --dbuser=$DB_USER --dbpass=$DB_PASS --library-path=/tmp/wp-test-library --path=$WP_CORE_DIR
