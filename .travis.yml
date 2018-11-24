@@ -22,6 +22,7 @@ matrix:
 before_script:
 - export PATH="$HOME/.composer/vendor/bin:$PATH"
 - composer install
+- ./vendor/bin/wp package install https://github.com/stephenharris/wp-test-library.git
 - mysql --version
 - php --version
 - ./vendor/bin/phpunit --version
