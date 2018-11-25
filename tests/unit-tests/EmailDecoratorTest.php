@@ -3,9 +3,9 @@
 use PHPUnit\Framework\TestCase;
 use Brain\Monkey;
 use Brain\Monkey\Functions;
-use StephenHarris\WPEmail\Email;
-use StephenHarris\WPEmail\PlainEmail;
-use StephenHarris\WPEmail\Decorator;
+use WPLib\Email\Email;
+use WPLib\Email\PlainEmail;
+use WPLib\Email\Decorator;
 
 final class EmailDecoratorTest extends TestCase
 {
@@ -102,6 +102,6 @@ final class EmailDecoratorTest extends TestCase
     }
 }
 
-class StubDecorator extends \StephenHarris\WPEmail\Decorator {
+class StubDecorator extends \WPLib\Email\Decorator {
     
 }

@@ -3,8 +3,8 @@
 use PHPUnit\Framework\TestCase;
 use Brain\Monkey;
 use Brain\Monkey\Functions;
-use StephenHarris\WPEmail\PlainEmail;
-use StephenHarris\WPEmail\Mailer;
+use WPLib\Email\PlainEmail;
+use WPLib\Email\Mailer;
 
 final class MailerTest extends TestCase
 {

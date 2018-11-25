@@ -1,8 +1,8 @@
 <?php
-namespace StephenHarris\WPEmail\IntegrationTests;
+namespace WPLib\Email\IntegrationTests;
 
-use StephenHarris\WPEmail\PlainEmail;
-use StephenHarris\WPEmail\Mailer;
+use WPLib\Email\PlainEmail;
+use WPLib\Email\Mailer;
 use PHPUnit\Framework\TestCase;
 
 class EmailTest extends \WP_UnitTestCase

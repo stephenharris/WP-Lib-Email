@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use StephenHarris\WPEmail\FileTemplate;
+use WPLib\Email\FileTemplate;
 
 final class FileTemplateTest extends TestCase
 {

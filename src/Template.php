@@ -1,7 +1,7 @@
 <?php
-namespace StephenHarris\WPEmail;
+namespace WPLib\Email;
 
-use StephenHarris\WPEmail\Booking;
+use WPLib\Email\Booking;
 
 interface Template
 {

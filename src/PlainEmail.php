@@ -1,5 +1,5 @@
 <?php
-namespace StephenHarris\WPEmail;
+namespace WPLib\Email;
 
 class PlainEmail implements Email
 {
